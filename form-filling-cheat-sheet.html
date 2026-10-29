@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form-Filling Cheat Sheet — Free Paperwork Organizer Kit</title>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; font-size: 17px; line-height: 1.55; color: #111; margin: 0; padding: 0 16px; }
+  .kit-band { background: #0b3d62; color: #fff; padding: 14px 18px; border-radius: 8px; margin-bottom: 18px; }
+  .kit-band .org { font-size: 12.5px; letter-spacing: 0.06em; text-transform: uppercase; color: #bcd6ea; margin-bottom: 4px; }
+  .kit-band h1 { margin: 0; font-size: 26px; font-weight: 700; }
+  .kit-band .sub { margin-top: 6px; font-size: 14px; color: #d7e6f4; }
+  h2 { font-size: 21px; margin: 22px 0 10px; color: #0b3d62; }
+  p { margin: 8px 0; }
+  ul { margin: 8px 0 14px 20px; padding: 0; }
+  li { margin-bottom: 6px; }
+  .meta-row { display: flex; gap: 12px; margin: 8px 0 14px; flex-wrap: wrap; }
+  .meta-cell { flex: 1 1 170px; border: 1px solid #8a8a8a; padding: 8px 10px; font-size: 16px; }
+  .meta-cell label { display: block; font-size: 12.5px; color: #555; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px; }
+  .meta-cell input.fill { width: 100%; border: none; font: inherit; font-size: 16px; background: transparent; padding: 0; }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0 18px; font-size: 16px; }
+  th { background: #0b3d62; color: #fff; text-align: left; padding: 10px 12px; font-size: 15px; border: 1px solid #0b3d62; }
+  td { border: 1px solid #6b6b6b; padding: 8px 10px; height: 44px; vertical-align: middle; }
+  input.fill { border: 1px solid #333; width: 100%; height: 100%; background: #fff; padding: 4px 6px; font-size: 15px; }
+  input.fill:focus { border-color: #0b3d62; outline: 2px solid #0b3d62; }
+  .notes { border: 1px solid #6b6b6b; padding: 12px 14px; font-size: 15px; min-height: 90px; }
+  .footer { margin-top: 26px; font-size: 13px; color: #555; border-top: 1px solid #999; padding-top: 10px; }
+  .footer p { margin: 4px 0; }
+  .screen-hint { display: block; font-size: 12.5px; color: #444; margin-top: 6px; }
+  .callout { border-left: 4px solid #0b3d62; background: #eef4fa; padding: 10px 14px; margin: 12px 0; font-size: 15.5px; }
+  @media print {
+    body { background: #fff; font-size: 16px; padding: 0; }
+    .no-print, .screen-hint { display: none !important; }
+    .kit-band { -webkit-print-color-adjust: exact; print-color-adjust: exact; background: #0b3d62 !important; color: #fff !important; }
+    .kit-band .org { color: #bcd6ea !important; }
+    .kit-band .sub { color: #d7e6f4 !important; }
+    .callout { -webkit-print-color-adjust: exact; print-color-adjust: exact; background: #eef4fa !important; }
+    tr { page-break-inside: avoid; }
+    input, select { color: #000 !important; }
+    .footer { color: #333; }
+    @page { size: Letter; margin: 0.65in; }
+  }
+</style>
+</head>
+<body>
+
+<div class="kit-band">
+  <div class="org">Asdale Dynamics, LLC &bull; Freebies</div>
+  <h1>Form-Filling Cheat Sheet</h1>
+  <div class="sub">Fill in the shaded fields once, then copy onto forms as needed. Large-print friendly &bull; no account needed &bull; print with "Background graphics" on.</div>
+</div>
+
+<div class="callout"><b>Safety first:</b> never carry your full Social Security number on this sheet. Write only the last 4 on forms, and never email or text your full SSN, full card numbers, or passwords.</div>
+
+<h2>Your information (fill once)</h2>
+<div class="meta-row">
+  <div class="meta-cell"><label for="fs-fullname">Full name</label><input type="text" class="fill" id="fs-fullname"></div>
+  <div class="meta-cell"><label for="fs-dob">Date of birth</label><input type="text" class="fill" id="fs-dob"></div>
+  <div class="meta-cell"><label for="fs-ssn4">SSN (last 4 only)</label><input type="text" class="fill" id="fs-ssn4"></div>
+</div>
+<div class="meta-row">
+  <div class="meta-cell"><label for="fs-address">Street address</label><input type="text" class="fill" id="fs-address"></div>
+  <div class="meta-cell"><label for="fs-city">City</label><input type="text" class="fill" id="fs-city"></div>
+  <div class="meta-cell"><label for="fs-state">State</label><input type="text" class="fill" id="fs-state"></div>
+  <div class="meta-cell"><label for="fs-zip">ZIP code</label><input type="text" class="fill" id="fs-zip"></div>
+</div>
+<div class="meta-row">
+  <div class="meta-cell"><label for="fs-phone">Phone</label><input type="text" class="fill" id="fs-phone"></div>
+  <div class="meta-cell"><label for="fs-email">Email</label><input type="text" class="fill" id="fs-email"></div>
+  <div class="meta-cell"><label for="fs-emergency">Emergency contact</label><input type="text" class="fill" id="fs-emergency"></div>
+  <div class="meta-cell"><label for="fs-relation">Relationship</label><input type="text" class="fill" id="fs-relation"></div>
+</div>
+<div class="meta-row">
+  <div class="meta-cell"><label for="fs-doctor">Primary doctor</label><input type="text" class="fill" id="fs-doctor"></div>
+  <div class="meta-cell"><label for="fs-doctor-phone">Doctor phone</label><input type="text" class="fill" id="fs-doctor-phone"></div>
+  <div class="meta-cell"><label for="fs-pharmacy">Pharmacy</label><input type="text" class="fill" id="fs-pharmacy"></div>
+  <div class="meta-cell"><label for="fs-pharmacy-phone">Pharmacy phone</label><input type="text" class="fill" id="fs-pharmacy-phone"></div>
+</div>
+<div class="meta-row">
+  <div class="meta-cell"><label for="fs-insurance">Insurance member ID</label><input type="text" class="fill" id="fs-insurance"></div>
+  <div class="meta-cell"><label for="fs-insgroup">Insurance group #</label><input type="text" class="fill" id="fs-insgroup"></div>
+  <div class="meta-cell"><label for="fs-rx">Prescription RX #</label><input type="text" class="fill" id="fs-rx"></div>
+</div>
+
+<h2>Common form fields</h2>
+<table>
+  <thead>
+    <tr><th style="width:30%">Field on form</th><th style="width:40%">What to write</th><th style="width:30%">Example</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Full legal name</td><td>First, middle, last</td><td>Jordan Alex Rivera</td></tr>
+    <tr><td>Date of birth</td><td>MM/DD/YYYY</td><td>03/14/1985</td></tr>
+    <tr><td>SSN</td><td>Last 4 only on unsecured forms</td><td>***-**-6789</td></tr>
+    <tr><td>Address</td><td>Street, city, state, ZIP</td><td>123 Main St, Apt 4</td></tr>
+    <tr><td>Phone</td><td>(555) 555-0123</td><td>(555) 555-0123</td></tr>
+    <tr><td>Email</td><td>Address you check regularly</td><td>name@email.com</td></tr>
+    <tr><td>Signature</td><td>Sign in ink; never sign a blank form</td><td>Jordan Rivera</td></tr>
+    <tr><td>Date</td><td>Today's date</td><td>10/29/2026</td></tr>
+    <tr><td>N/A</td><td>Write "N/A" if a field doesn't apply</td><td>N/A</td></tr>
+  </tbody>
+</table>
+
+<h2>Quick reminders</h2>
+<ul>
+  <li>Use black or blue ink when writing by hand.</li>
+  <li>Don't sign blank forms &mdash; fill in every field first or write N/A.</li>
+  <li>Keep a copy of everything you sign.</li>
+  <li>Store this sheet somewhere safe; it has personal information on it.</li>
+  <li>Ask for help if a form is confusing &mdash; clinic staff, librarians, and trusted friends can walk through it with you.</li>
+</ul>
+
+<h2>Notes</h2>
+<div class="notes"></div>
+
+<span class="screen-hint">Tip: fill out on screen, then print. Or print first and write by hand.</span>
+
+<div class="footer">
+  <p>Free Paperwork Organizer Kit &mdash; Asdale Dynamics, LLC</p>
+  <p>Form-Filling Cheat Sheet &bull; large-print friendly &bull; no account needed &bull; education only, not medical or legal advice</p>
+</div>
+
+</body>
+</html>

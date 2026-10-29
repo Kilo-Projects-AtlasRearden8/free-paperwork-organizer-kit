@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bill Tracker — Free Paperwork Organizer Kit</title>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; font-size: 17px; line-height: 1.55; color: #111; margin: 0; padding: 0 16px; }
+  .kit-band { background: #0b3d62; color: #fff; padding: 14px 18px; border-radius: 8px; margin-bottom: 18px; }
+  .kit-band .org { font-size: 12.5px; letter-spacing: 0.06em; text-transform: uppercase; color: #bcd6ea; margin-bottom: 4px; }
+  .kit-band h1 { margin: 0; font-size: 26px; font-weight: 700; }
+  .kit-band .sub { margin-top: 6px; font-size: 14px; color: #d7e6f4; }
+  h2 { font-size: 21px; margin: 22px 0 10px; color: #0b3d62; }
+  .meta-row { display: flex; gap: 12px; margin: 8px 0 14px; flex-wrap: wrap; }
+  .meta-cell { flex: 1 1 160px; border: 1px solid #8a8a8a; padding: 8px 10px; font-size: 16px; }
+  .meta-cell label { display: block; font-size: 12.5px; color: #555; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px; }
+  .meta-cell input.fill { width: 100%; border: none; font: inherit; font-size: 16px; background: transparent; padding: 0; }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0 18px; font-size: 16px; }
+  caption { text-align: left; font-size: 13px; color: #555; margin: 0 0 6px; font-style: italic; }
+  th { background: #0b3d62; color: #fff; text-align: left; padding: 10px 12px; font-size: 15px; border: 1px solid #0b3d62; }
+  td { border: 1px solid #6b6b6b; padding: 8px 10px; height: 46px; vertical-align: middle; }
+  td.center { text-align: center; }
+  input.fill { border: 1px solid #333; width: 100%; height: 100%; background: #fff; padding: 4px 6px; font-size: 15px; }
+  input.fill:focus { border-color: #0b3d62; outline: 2px solid #0b3d62; }
+  input.cb { width: 22px; height: 22px; margin: 0; }
+  .total-row td { background: #eef4fa; font-weight: 700; border-top: 2px solid #0b3d62; }
+  .notes { border: 1px solid #6b6b6b; padding: 12px 14px; font-size: 15px; min-height: 100px; }
+  .footer { margin-top: 26px; font-size: 13px; color: #555; border-top: 1px solid #999; padding-top: 10px; }
+  .footer p { margin: 4px 0; }
+  .screen-hint { display: block; font-size: 12.5px; color: #444; margin-top: 6px; }
+  @media print {
+    body { background: #fff; font-size: 16px; padding: 0; }
+    .no-print, .screen-hint { display: none !important; }
+    .kit-band { -webkit-print-color-adjust: exact; print-color-adjust: exact; background: #0b3d62 !important; color: #fff !important; }
+    .kit-band .org { color: #bcd6ea !important; }
+    .kit-band .sub { color: #d7e6f4 !important; }
+    tr { page-break-inside: avoid; }
+    td { height: auto; min-height: 40px; }
+    input, select { color: #000 !important; }
+    .footer { color: #333; }
+    @page { size: Letter; margin: 0.65in; }
+  }
+</style>
+</head>
+<body>
+
+<div class="kit-band">
+  <div class="org">Asdale Dynamics, LLC &bull; Freebies</div>
+  <h1>Bill Tracker</h1>
+  <div class="sub">Fill in the shaded fields, then print. Large-print friendly &bull; no account needed &bull; print with "Background graphics" on.</div>
+</div>
+
+<div class="meta-row">
+  <div class="meta-cell"><label for="bt-month">Month</label><input type="text" class="fill" id="bt-month"></div>
+  <div class="meta-cell"><label for="bt-year">Year</label><input type="text" class="fill" id="bt-year"></div>
+</div>
+
+<table>
+  <caption>List each bill you pay. Type into the shaded cells, then check the box when paid.</caption>
+  <thead>
+    <tr>
+      <th style="width:26%">Bill / Account</th>
+      <th style="width:13%">Due date</th>
+      <th style="width:13%">Amount due</th>
+      <th style="width:16%">Payment method</th>
+      <th style="width:13%">Date paid</th>
+      <th style="width:16%">Confirmation #</th>
+      <th class="center" style="width:3%">Paid?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><input type="text" class="fill"></td><td><input type="text" class="fill"></td><td><input type="text" class="fill"></td><td><input type="text" class="fill"></td><td class="center"><input type="text" class="fill"></td><td><input type="text" class="fill"></td><td class="center"><input type="checkbox" class="cb"></td></tr>
+    <tr><td><input type="text" class="fill"></td><td><input type="text" class="fill"></td><td><input type="text" class="fill"></td><td><input type="text" class="fill"></td><td class="center"><input type="text" class="fill"></td><td><input type="text" class="fill"></td><td class="center"><input type="checkbox" class="cb"></td></tr>
+    <tr><td><input type="text" class="fill"></td><td><input type="text" class="fill"></td><td><input type="text" class="fill"></td><td><input type="text" class="fill"></td><td class="center"><input type="text" class="fill"></td><td><input type="text" class="fill"></td><td class="center"><input type="checkbox" class="cb"></td></tr>
+    <tr><td><input type="text" class="fill"></td><td><input type="text" class="fill"></td><td><input type="text" class="fill"></td><td><input type="text" class="fill"></td><td class="center"><input type="text" class="fill"></td><td><input type="text" class="fill"></td><td class="center"><input type="checkbox" class="cb"></td></tr>
+    <tr><td><input type="text" class="fill"></td><td><input type="text" class="fill"></td><td><input type="text" class="fill"></td><td><input type="text" class="fill"></td><td class="center"><input type="text" class="fill"></td><td><input type="text" class="fill"></td><td class="center"><input type="checkbox" class="cb"></td></tr>
+    <tr><td><input type="text" class="fill"></td><td><input type="text" class="fill"></td><td><input type="text" class="fill"></td><td><input type="text" class="fill"></td><td class="center"><input type="text" class="fill"></td><td><input type="text" class="fill"></td><td class="center"><input type="checkbox" class="cb"></td></tr>
+    <tr><td><input type="text" class="fill"></td><td><input type="text" class="fill"></td><td><input type="text" class="fill"></td><td><input type="text" class="fill"></td><td class="center"><input type="text" class="fill"></td><td><input type="text" class="fill"></td><td class="center"><input type="checkbox" class="cb"></td></tr>
+    <tr><td><input type="text" class="fill"></td><td><input type="text" class="fill"></td><td><input type="text" class="fill"></td><td><input type="text" class="fill"></td><td class="center"><input type="text" class="fill"></td><td><input type="text" class="fill"></td><td class="center"><input type="checkbox" class="cb"></td></tr>
+    <tr><td><input type="text" class="fill"></td><td><input type="text" class="fill"></td><td><input type="text" class="fill"></td><td><input type="text" class="fill"></td><td class="center"><input type="text" class="fill"></td><td><input type="text" class="fill"></td><td class="center"><input type="checkbox" class="cb"></td></tr>
+    <tr><td><input type="text" class="fill"></td><td><input type="text" class="fill"></td><td><input type="text" class="fill"></td><td><input type="text" class="fill"></td><td class="center"><input type="text" class="fill"></td><td><input type="text" class="fill"></td><td class="center"><input type="checkbox" class="cb"></td></tr>
+  </tbody>
+  <tfoot>
+    <tr class="total-row">
+      <td colspan="2">Totals</td>
+      <td><input type="text" class="fill"></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td class="center"></td>
+    </tr>
+  </tfoot>
+</table>
+
+<h2>Notes</h2>
+<div class="notes"></div>
+
+<span class="screen-hint">Tip: fill out on screen, then print. Or print first and write by hand.</span>
+
+<div class="footer">
+  <p>Free Paperwork Organizer Kit &mdash; Asdale Dynamics, LLC</p>
+  <p>Bill Tracker &bull; large-print friendly &bull; no account needed</p>
+</div>
+
+</body>
+</html>
